@@ -55,7 +55,12 @@ class _MyListScreenState extends State {
         body: ListView.builder(
           itemCount: users.length,
           itemBuilder: (context, index) {
-            return ListTile(title: Text(users[index].name));
+            return ListTile(
+                leading: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        'https://res.cloudinary.com/djxdnzlej/image/upload/v1554376001/pp.jpg')),
+                title: Text(users[index].name),
+                subtitle: Text(users[index].email));
           },
         ));
   }
